@@ -75,12 +75,12 @@ const SKILLS: Skill[] = [
 ];
 
 const PORTFOLIO: PortfolioItem[] = [
-  { img: "public/desert.jpg", title: "Desert Design", cat: "DESIGN" },
-  { img: "public/loginportal.png", title: "Login Portal", cat: "FRONTEND" },
-  { img: "public/products.png", title: "Next Platform", cat: "BRANDING" },
-  { img: "public/laptops.png", title: "Magazine Layout", cat: "DESIGN" },
-  { img: "public/palettes.png", title: "Merger Project", cat: "BRANDING" },
-  { img: "public/logos.png", title: "Architecture Logo", cat: "LOGO" },
+  { img: "/desert.jpg", title: "Desert Design", cat: "DESIGN" },
+  { img: "/loginportal.png", title: "Login Portal", cat: "FRONTEND" },
+  { img: "/products.png", title: "Next Platform", cat: "BRANDING" },
+  { img: "/laptops.png", title: "Magazine Layout", cat: "DESIGN" },
+  { img: "/palettes.png", title: "Merger Project", cat: "BRANDING" },
+  { img: "/logos.png", title: "Architecture Logo", cat: "LOGO" },
 ];
 
 export default function Portfolio() {
@@ -176,7 +176,7 @@ export default function Portfolio() {
 
           {/* Right */}
           <div style={styles.heroRight} className="slide-in-right">
-            <img src="public\kar.png" alt="charechtar" />
+            <img src="\kar.png" alt="charechtar" />
           </div>
         </div>
 
@@ -198,7 +198,7 @@ export default function Portfolio() {
           <div style={styles.aboutVisual}>
             <div style={styles.aboutImgBox}>
               <div style={styles.aboutImgInner}>
-                <img src="public\kar.png" alt="charechtar" />
+                <img src="\kar.png" alt="charechtar" />
               </div>
               <div style={styles.aboutTag1}>Design</div>
               <div style={styles.aboutTag2}>Code</div>
