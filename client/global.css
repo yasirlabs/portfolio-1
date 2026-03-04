@@ -1,0 +1,216 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .glow-border {
+    transition: all 0.3s ease;
+    border: 1px solid hsl(var(--border));
+  }
+
+  .glow-border:hover {
+    border-color: hsl(var(--accent));
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(45, 83%, 55%) 0%, hsl(45, 80%, 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 270 40% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 270 30% 20%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 270 30% 20%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 83% 55%;
+    --primary-foreground: 270 40% 12%;
+
+    --secondary: 270 30% 30%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 270 20% 40%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 45 83% 55%;
+    --accent-foreground: 270 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 20% 30%;
+    --input: 270 20% 30%;
+    --ring: 45 83% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 270 40% 12%;
+
+    --sidebar-foreground: 0 0% 95%;
+
+    --sidebar-primary: 45 83% 55%;
+
+    --sidebar-primary-foreground: 270 40% 12%;
+
+    --sidebar-accent: 270 30% 30%;
+
+    --sidebar-accent-foreground: 0 0% 95%;
+
+    --sidebar-border: 270 20% 30%;
+
+    --sidebar-ring: 45 83% 55%;
+  }
+
+  .dark {
+    --background: 270 40% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 270 30% 20%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 270 30% 20%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 83% 55%;
+    --primary-foreground: 270 40% 12%;
+
+    --secondary: 270 30% 30%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 270 20% 40%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 45 83% 55%;
+    --accent-foreground: 270 40% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 20% 30%;
+    --input: 270 20% 30%;
+    --ring: 45 83% 55%;
+    --sidebar-background: 270 40% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 83% 55%;
+    --sidebar-primary-foreground: 270 40% 12%;
+    --sidebar-accent: 270 30% 30%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 270 20% 30%;
+    --sidebar-ring: 45 83% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: linear-gradient(135deg, hsl(270, 40%, 12%) 0%, hsl(270, 35%, 18%) 50%, hsl(260, 40%, 15%) 100%);
+    background-attachment: fixed;
+    @apply text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
