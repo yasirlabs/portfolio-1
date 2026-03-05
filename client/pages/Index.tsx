@@ -118,7 +118,7 @@ export default function Portfolio() {
       {/* NAV */}
       <nav style={{ ...styles.nav, ...(scrolled ? styles.navScrolled : {}) }}>
         <div style={styles.logo}>
-          <span style={styles.logoText}>OAD</span>
+          <span style={styles.logoText}>YASIR</span>
           <span style={styles.logoDot}>.</span>
         </div>
         <div style={styles.navLinks}>
@@ -343,7 +343,7 @@ export default function Portfolio() {
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <span style={styles.footerLogo}>OAD<span style={styles.accent}>.</span></span>
+        <span style={styles.footerLogo}>YASIR<span style={styles.accent}>.</span></span>
         <span style={styles.footerText}>© 2024 Yasir Alrawi Dahbi. All rights reserved.</span>
         <div style={styles.footerLinks}>
           {["LinkedIn", "Behance", "GitHub", "Dribbble"].map(l => (
