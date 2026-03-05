@@ -75,12 +75,12 @@ const SKILLS: Skill[] = [
 ];
 
 const PORTFOLIO: PortfolioItem[] = [
-  { img: "/desert.jpg", title: "Desert Design", cat: "DESIGN" },
-  { img: "/loginportal.png", title: "Login Portal", cat: "FRONTEND" },
-  { img: "/products.png", title: "Next Platform", cat: "BRANDING" },
-  { img: "/laptops.png", title: "Magazine Layout", cat: "DESIGN" },
-  { img: "/palettes.png", title: "Merger Project", cat: "BRANDING" },
-  { img: "/logos.png", title: "Architecture Logo", cat: "LOGO" },
+  { img: "public/desert.jpg", title: "Desert Design", cat: "DESIGN" },
+  { img: "public/loginportal.png", title: "Login Portal", cat: "FRONTEND" },
+  { img: "public/products.png", title: "Next Platform", cat: "BRANDING" },
+  { img: "public/laptops.png", title: "Magazine Layout", cat: "DESIGN" },
+  { img: "public/palettes.png", title: "Merger Project", cat: "BRANDING" },
+  { img: "public/logos.png", title: "Architecture Logo", cat: "LOGO" },
 ];
 
 export default function Portfolio() {
@@ -146,8 +146,8 @@ export default function Portfolio() {
               Available for work
             </div>
             <h1 style={styles.heroName}>
-              Omar<br />
-              <span style={styles.heroNameAccent}>ALAOUI</span><br />
+              Yasir<br />
+              <span style={styles.heroNameAccent}>ALRAWI</span><br />
               <span style={styles.heroNameLight}>DAHBi</span>
             </h1>
             <p style={styles.heroRole}>
@@ -176,7 +176,7 @@ export default function Portfolio() {
 
           {/* Right */}
           <div style={styles.heroRight} className="slide-in-right">
-            <img src="\kar.png" alt="charechtar" />
+            <img src="public\kar.png" alt="charechtar" />
           </div>
         </div>
 
@@ -198,7 +198,7 @@ export default function Portfolio() {
           <div style={styles.aboutVisual}>
             <div style={styles.aboutImgBox}>
               <div style={styles.aboutImgInner}>
-                <img src="\kar.png" alt="charechtar" />
+                <img src="public\kar.png" alt="charechtar" />
               </div>
               <div style={styles.aboutTag1}>Design</div>
               <div style={styles.aboutTag2}>Code</div>
@@ -324,8 +324,8 @@ export default function Portfolio() {
           </p>
           <div style={styles.contactCards}>
             {([
-              { icon: "✉️", label: "Email", val: "omar@example.com", href: "mailto:omar@example.com" },
-              { icon: "📍", label: "Location", val: "Morocco", href: "#" },
+              { icon: "✉️", label: "Email", val: "yasir7alrawi23@gmail.com", href: "mailto:yasir7alrawi23@gmail.com" },
+              { icon: "📍", label: "Location", val: "Turkey", href: "#" },
               { icon: "📱", label: "Phone", val: "+212 651 405 939", href: "tel:+212651405939" },
             ] as ContactItem[]).map((c) => (
               <a key={c.label} href={c.href} style={styles.contactCard} className="contact-card">
@@ -344,7 +344,7 @@ export default function Portfolio() {
       {/* FOOTER */}
       <footer style={styles.footer}>
         <span style={styles.footerLogo}>OAD<span style={styles.accent}>.</span></span>
-        <span style={styles.footerText}>© 2024 Omar Alaoui Dahbi. All rights reserved.</span>
+        <span style={styles.footerText}>© 2024 Yasir Alrawi Dahbi. All rights reserved.</span>
         <div style={styles.footerLinks}>
           {["LinkedIn", "Behance", "GitHub", "Dribbble"].map(l => (
             <a key={l} href="#" style={styles.footerLink}>{l}</a>
